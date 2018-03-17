@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 28</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Crear un programa que contenga una función pintar_rectangulo(lado, figura). 
+            Esta función deberá pintar en la página un cuadrilátero de lado x lado con la figura proporcionada.
+  		    */
+
+            function pintar_rectangulo(lado, figura) {
+                for (let x = 0; x < lado; x++) {
+                    for(let y = 0; y < lado; y++) {
+                        if(x === 0 || x === lado-1 || y === 0 || y === lado-1) {
+                            document.write(figura);
+                        }else {
+                            document.write('&nbsp;&nbsp;');
+                        }
+                    }
+                    document.write('</br>');
+                }
+            }
+
+            let lado = parseInt(prompt('Dame la cantidad de lados del cuadrilatero'));
+            let figura = prompt('Dame una figura para dibujar el cuadrilatero');
+            pintar_rectangulo(lado, figura);
+        </script>
+    </body>
+</html>

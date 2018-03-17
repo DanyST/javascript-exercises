@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 25</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+			Crear un programa que contenga un número aleatorio del 1 al 100, sin mostrarlo, y permitir que el 
+            usuario intente adivinarlo. 
+            El usuario solamente tendrá 5 oportunidades, en cada oportunidad fallida se le darán pistas para saber 
+            si debe intentar con un número mayor o menor.
+  		    */
+
+            let randomNumber = Math.floor((Math.random() * 100) +1);
+            for(let i = 4; i >= 0; i--) {
+                let numberUser = parseInt(prompt(`Número a advinar?`));
+
+                if(numberUser === randomNumber ) {
+                    alert('Bien! has adinivado ;)');
+                    break;
+                }else if(numberUser > randomNumber) {
+                    if(i === 0) {
+                        alert('Has perdido :(, juega nuevamente! :D!');
+                        break;
+                    }
+                    alert(`Intenta con un numero menor (Te quedan ${i} oportunidades)`);
+                }else {
+                    if(i === 0) {
+                        alert('Has perdido :(, juega nuevamente! :D!');
+                        break;
+                    }
+                    alert(`Intenta con un numero mayor (Te quedan ${i} oportunidades)`);
+                }
+            }
+            alert('¡Juego finalizado!')
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 20</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Crear un programa que escriba la suma de los números del 1 a N, donde N será dado por el usuario.
+  		
+            let finalNumber = parseInt(prompt('sumar de 1 al :'));
+            let sum = 0;
+            let message = new Array()
+
+            for(let i = 1; i <= finalNumber; i++) {
+                message.push(i);
+                sum += i;
+            }
+            message = message.join(' + ')
+            alert(`${message} = ${sum}`);
+        </script>
+    </body>
+</html>

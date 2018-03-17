@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 20</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+			Crear un programa que reciba los el nombre y las calificaciones de N personas, mientras que el usuario no escriba 
+            “terminar”. 
+            Al terminar deberá mostrar la media de calificaciones de cada persona.
+  		    */
+            
+            let number = 1;
+            let name;
+            let peoples = new Array();
+
+            while(true) {
+                name = prompt(`${number}) Agrega el nombre de una persona ('terminar' para finalizar)`);
+
+                if (name.toLowerCase() === 'terminar') {
+                    break;
+                }
+
+                let average = 0;
+                for(let i = 1; i <= 4; i++) {
+                    average += parseInt(prompt(`${number}) Ingresa la nota ${i}/4 de ${name}`));
+                }
+
+                average = average / 4;
+
+                peoples.push({'name': name, 'average': average});
+
+                number++;
+            }
+
+            for(let i = 0; i < peoples.length; i++) {
+                document.write(`${peoples[i].name} ${peoples[i].average}</br>`);
+            }
+        </script>
+    </body>
+</html>

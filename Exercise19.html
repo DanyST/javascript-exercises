@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Crear un programa que almacene 10 números dados por el usuario y muestre únicamente los pares.
+            
+            let number;
+            let evenNumbers = new Array()
+
+            for(let i = 1; i <= 10; i++) {
+                number = parseInt(prompt(`${i}) Ingresa un numero: `));
+
+                if (number % 2 === 0) {
+                    evenNumbers.push(number);
+                }
+            }
+
+            alert(`Son pares ${evenNumbers}`);
+        </script>
+    </body>
+</html>

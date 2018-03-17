@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //Crea un programa por el cual se solicite al usuario el radio de un círculo.
+            //El programa deberá calcular y mostrar el área
+
+            let radio = parseFloat(prompt('Ingrese el radio'));
+
+            function calculateAreaOfACircle(radio) {
+                let area = Math.PI * Math.pow(radio, 2);
+                return area.toFixed(2);
+            }
+
+            alert(`El radio es ${calculateAreaOfACircle(radio)}`);
+        </script>
+    </body>
+</html>
+
+
+
+
+

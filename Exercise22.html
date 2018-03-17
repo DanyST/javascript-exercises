@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 20</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             Crear un programa que reciba los nombres y edades de 10 personas. 
+            Mostrar únicamente los nombres de las personas que tienen derecho a votar (mayores a 18 años).
+            */
+            let name;
+            let oldYear;
+            let peoples = new Array();
+            for(let i = 0; i < 10; i++) {
+                name = prompt('Dame el nombre de la persona ' + (i+1))
+                oldYear = parseInt(prompt('Dame la edad de la persona ' + (i+1)));
+
+                if (oldYear >= 18) {
+                    peoples.push(name);
+                }
+            }
+
+            alert(`Tienen derecho al voto ${peoples.slice(0, -1)} y ${peoples.slice(-1)}`)
+        </script>
+    </body>
+</html>

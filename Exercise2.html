@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //Crea un programa que solicite dos números y muestre los resultados de todas sus operaciones aritméticas
+
+            let number1 = parseInt(prompt('Ingrese un numero'));
+            let number2 = parseInt(prompt('Ingrese otro numero'));
+
+            function aritmethicOperation(param1, param2) {
+                let operations2 = [
+                    `${param1} + ${param2} = ${param1 + param2}`,
+                    `${param1} - ${param2} = ${param1 - param2}`,
+                    `${param1} * ${param2} = ${param1 * param2}`,
+                    `${param1} / ${param2} = ${param1 / param2}`,
+                    `${param1}** ${param2} = ${Math.pow(param1, param2)}`,
+                    `${param1} % ${param2} = ${param1 % param2}`,
+                ];
+
+                return operations2.join('<br/>');
+            }
+
+            document.write(aritmethicOperation(number1, number2));
+       </script>
+        
+    </body>
+</html>
+
+

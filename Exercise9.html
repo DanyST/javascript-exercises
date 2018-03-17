@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 9</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             Crea un programa que reciba una cantidad , y pregunte si desea convertirla de Euros a USD o de
+             USD a Euros y muestre el resultado de la conversión.
+            */
+
+            let moneyQuantity = parseFloat(prompt("Ingrese una cantidad de dinero"))
+            let convertionType = parseInt(prompt("Seleccion un tipo de conversion \n1: Euros a USD \n2: USD a Euros"))
+
+            function convertion() {
+                let currentDollar = 1.23075
+                let result
+
+                if (convertionType === 1) {
+                    result = `${(moneyQuantity * currentDollar).toFixed(2)} USD`
+                }else if (convertionType === 2) {
+                    result = `${(moneyQuantity / currentDollar).toFixed(2)} Euros`
+                }
+            
+                return result
+            }
+
+            alert(convertion())
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 13</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Crear un programa que contenga una lista de 20 números y muestre un rango de la lista.
+            El inicio y fin del rango serán introducidos por el usuario y el programa deberá valida
+            que sean valores válidos.
+            */
+
+            let start = parseInt(prompt('ingrese numero de rango inicial'))
+            let end = parseInt(prompt('Ingrese numero de rango final'))
+
+            function numberRange(start, end) {
+                // management errors
+                try {
+                    if (typeof start !== 'number' || typeof end !== 'number' || isNaN(start) || isNaN(end)){
+                        throw new Error('Error: Ingrese solo numeros');
+                    }
+                }catch (error){
+                    return error.message;
+                }
+
+                // create array of 20 numbers
+                let numbers = new Array();
+                let result;
+
+                for(let i = 1; i<=20; i++) {
+                    numbers.push(i);
+                }
+
+                // filter range from array
+                if(start < end && (start >= 1 && start <= 20) && (end >=1 && end <= 20)){
+                    result = numbers.slice(start, end);
+                }else{
+                    result = 'El rango debe ser del 1 al 20';
+                }
+
+                return result;
+            }
+
+            alert(numberRange(start, end));
+        </script>
+    </body>
+</html>
+

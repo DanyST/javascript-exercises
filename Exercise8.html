@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 8</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Crear un programa que reciba un número entero y muestre si es par o impar, positivo o negativo , o cero.
+
+            let number = parseInt(prompt('Ingrese un numero entero'))
+
+            function numberDetail(number) {
+                let numberSigned;
+                let evenOrOddNumber;
+
+                if (number % 2 === 0) {
+                    evenOrOddNumber = 'par';
+                }else{
+                    evenOrOddNumber = 'impar';
+                }
+
+                if (number < 0) {
+                    numberSigned = 'Negativo';
+                }else if(number > 0) {
+                    numberSigned = 'Positivo';
+                }else {
+                    numberSigned = 'Cero';
+                }
+
+                return `Numero ${numberSigned} ${evenOrOddNumber}`;
+            }
+
+            alert(numberDetail(number));
+        </script>
+    </body>
+</html>     

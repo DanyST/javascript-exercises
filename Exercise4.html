@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Crea un programa que solicite tres notas y muestre su media.
+
+            let calification1 = parseInt(prompt('Ingrese la primera nota'));
+            let calification2 = parseInt(prompt('Ingrese la segunda nota'));
+            let calification3 = parseInt(prompt('Ingrese la tercera nota'));
+
+            function average(calification1, calification2, calification3) {
+                average = (calification1 + calification2 + calification3) / 3;
+                return average.toFixed(2);
+            }
+
+            alert(`Su media es ${average(calification1, calification2, calification3)}`);
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 15</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /* 
+            Crear un programa que reciba el nombre y las calificaciones de 3 personas.
+            Para cada persona deberá guardar la información en una tupla. 
+            El programa no mostrará resultados de salida.
+            */
+
+            let califications = new Array()
+
+            for (let i = 1; i <= 3; i++) {
+                let name = prompt('Ingresa el nombre de la persona ' + i);
+                let calification = parseFloat(prompt('Ingresa la nota de la persona '+ i));
+                califications.push({'name': name, 'calification': calification});
+            }
+            alert(califications[0].name);
+        </script>
+    </body>
+</html>
+
+

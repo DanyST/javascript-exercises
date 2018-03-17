@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 12</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //Crear un programa que reciba una letra e indique si es vocal o consonante.
+
+            let letter = prompt('Ingrese una letra');
+
+            function vocalOrConsonantLetter(letterParam) {
+                let letter = letterParam.toLowerCase();
+                let result;
+
+                if (isNaN(letterParam)){
+                     switch (letter) {
+                        case 'a':
+                        case 'e':
+                        case 'i':
+                        case 'o':
+                        case 'u':
+                            result = `${letterParam} es letra vocal`;
+                            break;
+                        default:
+                            result = `${letterParam} es letra consonante`;
+                            break;
+                        }
+                }else {
+                   result = `${letterParam} no es una letra`;
+                }
+                return result;
+            }
+
+            alert(vocalOrConsonantLetter(letter))
+        </script>
+    </body>
+</html>
+
+

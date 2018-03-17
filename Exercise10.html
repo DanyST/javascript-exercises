@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 10</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //Crear un programa que reciba un número del 1 al 7 y muestre el nombre de la película Star Wars correspondiente.
+
+            let number = parseInt(prompt('Ingrese un numero de una pelicula de Star Wars, y adivino su nombre'));
+
+            function starWarsMovieByNumber(number) {
+                let movie = null;
+
+                switch (number) {
+                    case 1: case 'I':
+                        movie = 'Star Wars I - La Amenaza fantasma'
+                        break;
+                    case 2: case 'II':
+                        movie = 'Star Wars II - La ataque de los clones'
+                        break
+                    case 3: case 'III':
+                        movie = 'Star Wars III - La venganza de los Sith'
+                        break
+                    case 4: case 'VI':
+                        movie = 'Star Wars IV - Una nueva esperanza'
+                        break
+                    case 5: case 'V':
+                        movie = 'Star Wars V - El imperio contraataca'
+                        break
+                    case 6: case 'VI':
+                        movie = 'Star Wars VI - El retorno del Jedi'
+                        break
+                    case 7: case 'VII':
+                        movie = 'Star Wars VII - El despertar de la fuerza'
+                        break
+                    case 8: case 'VIII':
+                        movie = 'Star Wars VIII - Los últimos Jedi'
+                        break
+                    default:
+                        movie = 'No existe esa pelicula de Star Wars, intenta con otro numero :('
+                        break
+                }
+
+                return movie;
+            }
+
+            alert(starWarsMovieByNumber(number));
+        </script>
+    </body>
+</html>

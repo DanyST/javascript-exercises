@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 32</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script src="./Exercise31.js"></script>
+        <script src="./Exercise32.js"></script>
+        <script type="text/javascript">
+        /*
+        Crear una clase Módulo con los siguientesatributos:>> 
+         Listado_alumnos, fecha_inicio,fecha_fin.El listado de alumnos deberá ser tipo Lista y 
+        contener objetos de tipo Alumno creado en elejercicioKC_EJ31.En la misma clase Módulo deberá implementar métodospara>>
+        agregar objetos Alumno a laLista>>  buscar unalumno>>  mostrar todos los alumnos con estatus_inscrito ==Tr u e .
+        */
+
+        let modulo = new Modulo(new Array(), '23 de Marzo', '05 de Abril');
+        modulo.agregarAlumno('Pedro', 'Simpson', 'pedro.simpson@gmail.com', true);
+        modulo.agregarAlumno('Juan', 'Simpson', 'juan.simpson@gmail.com', true);
+        modulo.agregarAlumno('Diego', 'Simpson', 'diego.simpson@gmail.com', true)
+        modulo.mostrarAlumnosInscritos();
+        modulo.buscarAlumnoPorNombre('Pedro');
+
+        </script>
+    </body>
+</html>

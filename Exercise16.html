@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 16</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Crear un programa que contenga una Lista de nombres. 
+            Solicitar un índice de la lista y mostrar el valor del índice.
+            El programa deberá validar que el índice es válido.
+            */
+
+            let index = parseInt(prompt("Ingresa el indice de un nombre"));
+
+            function getNameAtIndex(index) {
+                let names = ['Pedro Picapiedra', 'Pablo Marmol', 'Bob  Esponja', 'Patricio'];
+                let result = names[index];
+
+                if (result === undefined) {
+                    result = 'El indice no es valido';
+                }
+
+                return result;
+            }
+
+            alert(getNameAtIndex(index));
+        </script>
+    </body>
+</html>

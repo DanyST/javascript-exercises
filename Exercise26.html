@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 26</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Crear un programa con una función pintaFila() que arme las filas de una tabla html. 
+            Completar el programa con la estructura de una tabla e invocando a la función N veces, 
+            donde N es un valor introducido por el usuario.
+            */
+
+            let numberRows = parseInt(prompt('Dame el numero de filas para la tabla a crear'));
+
+            function pintaFila(numberRows) {
+                let table = document.createElement('table');
+                
+                for(let i = 0; i < numberRows; i++) {
+                    let row = document.createElement('tr');
+                    let col = document.createElement('td');
+                    row.appendChild(col);
+                    table.appendChild(row);
+                }
+
+                let body = document.body.appendChild(table);
+            }
+
+            pintaFila(numberRows);
+        </script>
+    </body>
+</html>	
+    
+    
+
+    
+    

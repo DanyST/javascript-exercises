@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 6</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Crea un programa que solicite dos números y muestre los resultados de aplicar comparaciones relacionales.
+
+            let number1 = parseInt(prompt('Ingrese un numero'));
+            let number2 = parseInt(prompt('Ingrese otro numero'));
+
+            function comparisonNumbers(number1, number2) {
+                let comparisons = [
+                    `${number1} < ${number2} = ${number1 < number2}`,
+                    `${number1} > ${number2} = ${number1 > number2}`,
+                    `${number1} y ${number2} son iguales = ${number1 === number2}`,
+                    `${number1} y ${number2} son distintos = ${number1 !== number2}`,
+                ];
+
+                return comparisons.join('</br>');
+            }
+
+            document.write(comparisonNumbers(number1, number2));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 17</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Crear un programa que contenga un diccionario con nombres y correos electrónicos. 
+            Solicitar el nombre de una persona y mostrar su correo electrónico.
+            Indicar con un mensaje apropiado cuando no se encuentre un resultado válido.
+            */
+
+            let name = prompt('Ingresa un nombre para mostrar su correo');
+
+            function findEmailByName(name) {
+                let result;
+                name = name.toLowerCase();
+
+                let persons = {
+                    pedro: 'pedro.picapiedra@gmail.com',
+                    pablo: 'pmarmol123@gmail.com',
+                    bob: 'bob@gmail.com'
+                }
+
+                result = persons[name];
+
+                if (persons[name] === undefined) {
+                    result = 'El nombre ingresado no existe en nuestros registros, intente con otro nombre';
+                }
+
+                return result;
+            }
+
+            alert(findEmailByName(name))
+        </script>
+    </body>
+</html>

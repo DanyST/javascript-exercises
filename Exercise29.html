@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 29</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             Modificar el programa KC_EJ24 (promedio de alumnos) de forma tal que el cálculo del promedio
+             se realice a través de una función. 
+  		    */
+              
+            function requestCalificationAndGetAverage() {
+                let name;
+                let number = 1;
+
+                while(true) {
+                    name = prompt(`${number}) Agrega el nombre de una persona ('terminar' para finalizar)`);
+
+                    if (name.toLowerCase() === 'terminar') {
+                        break;
+                    }
+
+                    let average = 0;
+                    for(let i = 1; i <= 4; i++) {
+                        average += parseInt(prompt(`${number}) Ingresa la nota ${i}/4 de ${name}`));
+                    }
+
+                    average = average / 4;
+
+                    peoples.push({'name': name, 'average': average});
+
+                    number++;
+                }
+                return peoples;
+
+            }
+
+            function descAverageSort() {
+                peoples = peoples.sort((a, b) => b.average - a.average);
+            }
+
+            function showAveragePeoples(){
+                for(let i = 0; i < peoples.length; i++) {
+                    document.write(`${peoples[i].name} ${peoples[i].average}</br>`);
+                }
+            }
+
+            let peoples = new Array();
+
+            requestCalificationAndGetAverage();
+            descAverageSort();
+            showAveragePeoples();
+
+        </script>
+    </body>
+</html>

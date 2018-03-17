@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 30</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Crear un programa que simule una máquina expendedora de gaseosas con las siguientes características:
+            Las bebidas disponibles son: Fanta, Pepsi, 7Up. 
+            Todas las bebidas tienen un costo de €1,0
+            La máquina recibe monedas de 10, 20 y 50 cent, y €1,0
+
+            El programa deberá permitir que el usuario seleccione una bebida e ingrese una a una las monedas. 
+            El programa deberá detenerse cuando el importe de la gaseosa haya sido completado 
+            y, de ser necesario, determinar el sobrante.
+            */
+            function selectSoda() {
+                let sodas = [{'1':'Fanta'}, {'2':'Pepsi'}, {'3':'7UP'}];
+                while(true) {
+                    let sodaSelected = parseInt(prompt('Elige una bebida: \n\n1: Fanta \n2: Pepsi \n3: 7UP'))
+                    // de esta forma un diccionario acepta key a través de una variable: object[variable]
+                    try {
+                        sodaSelected = sodas[sodaSelected-1][sodaSelected];
+                    }catch (error){
+                        alert('No tenemos esa bebida disponible, intenta con otra :(');
+                        continue;
+                    }
+
+                    return sodaSelected;
+                }
+            }
+
+            function moneyValid(money) {
+                if (money !== 10 && money !== 20 && money !== 50 && money !==1) {
+                    alert('Moneda no valida, intenta con otra');
+                    return false;
+                }else {
+                    return true;
+                }
+            }
+
+            function delivery(soda, remainingMoney) {
+                 alert(`Tu cambio es de ${remainingMoney} cent, disfruta tu ${soda}. ¡Muchas gracias!`)
+            }
+
+            function paySoda(soda) {
+                let SodaValue = 100;
+                let acumulatedMoney = 0;
+
+                while(true) {
+                    let money = parseInt(prompt('Ingrese una moneda: \n\nLas monedas aceptadas son: \n10 cent\n20 cent\n50 cent\n€1'))
+                    if (moneyValid(money)) {
+                        money === 1? acumulatedMoney += money * 100 : acumulatedMoney += money;
+                        if(acumulatedMoney < SodaValue) {
+                            alert(`Te faltan ${SodaValue - acumulatedMoney}`)
+                        }else{
+                            delivery(soda, (acumulatedMoney - SodaValue))
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            let soda = selectSoda();
+            paySoda(soda);
+        </script>
+    </body>
+</html>

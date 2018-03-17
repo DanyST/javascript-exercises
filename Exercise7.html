@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 7</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Crea un programa que solicite tres notas y calcule su media.
+            Dependiendo del valor de la media, mostrarás si el resultado es Apto o no Apto.
+            */
+
+            let calification1 = parseInt(prompt('Ingrese la nota Nº 1'));
+            let calification2 = parseInt(prompt('Ingrese la nota Nº 2'));
+            let calification3 = parseInt(prompt('Ingrese la nota Nº 3'));
+
+            function finalCalificationStatus(calification1, calification2, calification3) {
+                let average = (calification1 + calification2 + calification3) / 3;
+                let result = 'Apto';
+                
+                if (average < 5) {
+                    result = 'No Apto';
+                }
+
+                return result
+            }
+            
+            alert(finalCalificationStatus(calification1, calification2, calification3))
+        </script>
+    </body>
+</html>     

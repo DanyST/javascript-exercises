@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 5</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <script type="text/javascript">
+            /*
+            Crear un programa que solicite el año y mes de nacimiento de dos personas, y 
+            muestre el resultado de compararlas
+            */
+            
+            let month1 = prompt('Ingrese el mes de nacimiento de la persona Nº 1').toUpperCase();
+            let year1 = prompt('Ingrese año de nacimiento de la persona Nª 1').toUpperCase();
+            let month2 = prompt('Ingrese el mes de nacimiento de la persona Nº 2').toUpperCase();
+            let year2 = prompt('Ingrese año de nacimiento de la persona Nª 2').toUpperCase();
+
+            function comparisonBornDate(month1, year1, month2, year2) {
+                return month1 ===  month2 && year1 === year2;
+            }
+
+            alert(comparisonBornDate(month1, year1, month2, year2));
+       </script>
+    </body>
+</html>
+
+

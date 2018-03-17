@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 3</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Crea un programa que solicite una cantidad en Euros y muestre su equivalente en USD.
+
+            let euroMoney = parseInt(prompt('Ingrese una cantidad en Euros'));
+
+            function convertEurMoneyToUSD(eurParam) {
+                let currentDollar = 1.23075;
+                let result = currentDollar * eurParam;
+
+                return result.toFixed(2);
+            }
+
+            alert(`Su equivalente en USD es: ${convertEurMoneyToUSD(euroMoney)}`);
+        </script>
+    </body>
+</html>
+
+
